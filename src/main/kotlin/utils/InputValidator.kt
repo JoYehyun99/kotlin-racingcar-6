@@ -18,7 +18,7 @@ object InputValidator {
             require(!carName.contains(" ")) { NO_WHITESPACE_ERR }
         }
         val namesCnt = carNames.size
-        require(namesCnt == 1) { NOT_ENOUGH_CARS }
+        require(namesCnt > 1) { NOT_ENOUGH_CARS }
         require(namesCnt == carNames.toSet().size) { NO_DUPLICATE_NAME_ERR }
     }
 
