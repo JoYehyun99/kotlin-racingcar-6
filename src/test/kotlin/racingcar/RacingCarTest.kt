@@ -14,7 +14,7 @@ class RacingCarTest {
         val input = "pobi,woni,jun"
         val expected = listOf("pobi", "woni", "jun")
         val processor = UserInputReader()
-        val result = processor.setCarNameList(input)
+        val result = processor.setCarNames(input)
         assertEquals(expected, result)
     }
 
@@ -23,7 +23,7 @@ class RacingCarTest {
         val input = "pobi"
         val expected = listOf("pobi")
         val processor = UserInputReader()
-        val result = processor.setCarNameList(input)
+        val result = processor.setCarNames(input)
         assertEquals(expected, result)
     }
 

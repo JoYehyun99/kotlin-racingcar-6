@@ -1,7 +1,5 @@
 package racingcar
 
-import javax.swing.text.Caret
-
 class GameManager {
 
     private val gameConsole = GameConsole()

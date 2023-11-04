@@ -11,10 +11,10 @@ class UserInputReader {
     fun getCarName(): List<String> {
         println(CAR_NAME_INPUT_MSG)
         val input = Console.readLine()
-        return setCarNameList(input)
+        return setCarNames(input)
     }
 
-    fun setCarNameList(input: String): List<String> {
+    fun setCarNames(input: String): List<String> {
         val result = input.split(",")
         checkCarName(result)
         return result

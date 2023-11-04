@@ -3,19 +3,19 @@ package racingcar
 import utils.Constants.FORWARD_STEP
 import utils.RandomNumGenerator
 
-class Race(private val carList: List<Car>) {
+class Race(private val cars: List<Car>) {
     fun startRound(): List<Car> {
-        carList.forEach { car ->
+        cars.forEach { car ->
             if (RandomNumGenerator.getRandomNum() > 3) {
                 car.goForward(FORWARD_STEP)
             }
         }
-        return carList
+        return cars
     }
 
     fun findWinner(): List<Car> {
-        val maxDistance = carList.maxOfOrNull { it.distance }
-        return carList.filter { car ->
+        val maxDistance = cars.maxOfOrNull { it.distance }
+        return cars.filter { car ->
             car.distance == maxDistance
         }
     }

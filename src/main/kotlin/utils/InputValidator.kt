@@ -6,8 +6,8 @@ import utils.Constants.STRING_LENGTH_ERR_MSG
 
 object InputValidator {
 
-    fun checkCarName(carNameList: List<String>) {
-        carNameList.forEach { carName ->
+    fun checkCarName(carNames: List<String>) {
+        carNames.forEach { carName ->
             if (carName.isEmpty()) throw IllegalArgumentException(EMPTY_STRING_ERR_MSG)
             if (carName.length > 5) throw IllegalArgumentException(STRING_LENGTH_ERR_MSG)
         }

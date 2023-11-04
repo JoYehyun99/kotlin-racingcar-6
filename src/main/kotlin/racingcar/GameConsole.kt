@@ -10,13 +10,13 @@ class GameConsole {
         println(ROUND_RESULT_MSG)
     }
 
-    fun printRoundResult(carList: List<Car>) {
-        carList.forEach { car -> println(car) }
+    fun printRoundResult(cars: List<Car>) {
+        cars.forEach { car -> println(car) }
         println()
     }
 
-    fun printWinner(winnerList: List<Car>) {
+    fun printWinner(winners: List<Car>) {
         print(WINNER_RESULT_TITLE)
-        print(winnerList.joinToString(", ") { it.name })
+        print(winners.joinToString(", ") { it.name })
     }
 }
