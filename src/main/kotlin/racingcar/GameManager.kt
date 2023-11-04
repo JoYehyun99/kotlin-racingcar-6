@@ -23,7 +23,7 @@ class GameManager {
 
     private fun startRace(roundCnt: Int) {
         gameConsole.printRoundResultTitle()
-        for (cnt in 1..roundCnt) {
+        repeat(roundCnt) {
             gameConsole.printRoundResult(racingGame.startRound())
         }
     }

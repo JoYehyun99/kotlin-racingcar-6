@@ -8,12 +8,12 @@ object InputValidator {
 
     fun checkCarName(carNames: List<String>) {
         carNames.forEach { carName ->
-            if (carName.isEmpty()) throw IllegalArgumentException(EMPTY_STRING_ERR_MSG)
-            if (carName.length > 5) throw IllegalArgumentException(STRING_LENGTH_ERR_MSG)
+            require(carName.isNotEmpty()) { EMPTY_STRING_ERR_MSG }
+            require(carName.length < 6) { STRING_LENGTH_ERR_MSG }
         }
     }
 
     fun checkRoundCnt(input: String) {
-        if (input.toIntOrNull() == null) throw IllegalArgumentException(NOT_NUMBER_ERR_MSG)
+        requireNotNull(input.toIntOrNull()) { NOT_NUMBER_ERR_MSG }
     }
 }
