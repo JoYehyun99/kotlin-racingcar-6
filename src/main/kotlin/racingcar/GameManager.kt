@@ -7,16 +7,16 @@ class GameManager {
 
     fun runGame() {
         val userInputReader = UserInputReader()
-        val carList = initializeCarList(userInputReader.getCarName())
+        val cars = initializeCarList(userInputReader.getCarName())
         val roundCnt = userInputReader.getRoundCount()
 
-        racingGame = Race(carList)
+        racingGame = Race(cars)
         startRace(roundCnt)
         setWinner()
     }
 
-    private fun initializeCarList(carNameList: List<String>): List<Car> {
-        return carNameList.map { carName ->
+    private fun initializeCarList(carNames: List<String>): List<Car> {
+        return carNames.map { carName ->
             Car(carName)
         }.toList()
     }
@@ -29,7 +29,7 @@ class GameManager {
     }
 
     private fun setWinner() {
-        val winnerList = racingGame.findWinner()
-        gameConsole.printWinner(winnerList)
+        val winners = racingGame.findWinner()
+        gameConsole.printWinner(winners)
     }
 }
