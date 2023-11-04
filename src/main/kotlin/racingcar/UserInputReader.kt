@@ -1,7 +1,7 @@
 package racingcar
 
 import camp.nextstep.edu.missionutils.Console
-import utils.InputValidator.checkCarName
+import utils.InputValidator.checkCarNames
 import utils.InputValidator.checkRoundCnt
 
 class UserInputReader {
@@ -14,7 +14,7 @@ class UserInputReader {
 
     fun setCarNames(input: String): List<String> {
         val result = input.split(",")
-        checkCarName(result)
+        checkCarNames(result)
         return result
     }
 

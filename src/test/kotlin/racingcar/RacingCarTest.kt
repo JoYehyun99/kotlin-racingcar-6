@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.assertDoesNotThrow
 import org.junit.jupiter.api.assertThrows
-import utils.InputValidator.checkCarName
+import utils.InputValidator.checkCarNames
 import utils.InputValidator.checkRoundCnt
 
 class RacingCarTest {
@@ -30,13 +30,13 @@ class RacingCarTest {
     @Test
     fun When_InputCarNameLengthLessThanOrEqualTo5_Expect_Valid() {
         val input = listOf("pobi", "woni", "jun")
-        assertDoesNotThrow { checkCarName(input) }
+        assertDoesNotThrow { checkCarNames(input) }
     }
 
     @Test
     fun When_InputCarNameLengthExceed5_Expect_Invalid() {
         val input = listOf("yehyun", "woni", "jun")
-        assertThrows<IllegalArgumentException> { checkCarName(input) }
+        assertThrows<IllegalArgumentException> { checkCarNames(input) }
     }
 
     @Test
