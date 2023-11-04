@@ -5,11 +5,15 @@ import utils.RandomNumGenerator
 class Race(private val cars: List<Car>) {
     fun startRound(): List<Car> {
         cars.forEach { car ->
-            if (RandomNumGenerator.getRandomNum() >= FORWARD_THRESHOLD) {
-                car.goForward(FORWARD_STEP)
-            }
+            moveOrStop(RandomNumGenerator.getRandomNum(), car)
         }
         return cars
+    }
+
+    fun moveOrStop(num: Int, car: Car) {
+        if (num >= FORWARD_THRESHOLD) {
+            car.goForward(FORWARD_STEP)
+        }
     }
 
     fun findWinner(): List<Car> {
