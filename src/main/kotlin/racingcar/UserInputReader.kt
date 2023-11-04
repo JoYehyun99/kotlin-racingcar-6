@@ -1,8 +1,6 @@
 package racingcar
 
 import camp.nextstep.edu.missionutils.Console
-import utils.Constants.CAR_NAME_INPUT_MSG
-import utils.Constants.ROUND_INPUT_MSG
 import utils.InputValidator.checkCarName
 import utils.InputValidator.checkRoundCnt
 
@@ -25,5 +23,10 @@ class UserInputReader {
         val input = Console.readLine()
         checkRoundCnt(input)
         return input.toInt()
+    }
+
+    companion object {
+        const val CAR_NAME_INPUT_MSG = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"
+        const val ROUND_INPUT_MSG = "시도할 횟수는 몇 회인가요?"
     }
 }

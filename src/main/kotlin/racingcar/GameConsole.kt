@@ -1,8 +1,5 @@
 package racingcar
 
-import utils.Constants.WINNER_RESULT_TITLE
-import utils.Constants.ROUND_RESULT_MSG
-
 class GameConsole {
 
     fun printRoundResultTitle() {
@@ -18,5 +15,10 @@ class GameConsole {
     fun printWinner(winners: List<Car>) {
         print(WINNER_RESULT_TITLE)
         print(winners.joinToString(", ") { it.name })
+    }
+
+    companion object {
+        const val ROUND_RESULT_MSG = "실행 결과"
+        const val WINNER_RESULT_TITLE = "최종 우승자 : "
     }
 }
